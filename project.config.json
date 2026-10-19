@@ -1,0 +1,18 @@
+{
+  "description": "Python 资源大全中文版",
+  "miniprogramRoot": "miniprogram/",
+  "projectname": "python-resource-library",
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "libVersion": "3.6.5",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "minifyWXSS": true,
+    "minifyWXML": true
+  },
+  "condition": {}
+}

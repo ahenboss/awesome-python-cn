@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="hero">
+    <text class="kicker">{{copy.appName}}</text>
+    <text class="headline">{{copy.aboutHeadline}}</text>
+    <text class="stats">{{statsText}}</text>
+  </view>
+  <view class="card">
+    <text class="paragraph">{{copy.aboutP1}}</text>
+    <text class="paragraph">{{copy.aboutP2}}</text>
+    <text class="paragraph">{{copy.aboutP3}}</text>
+  </view>
+  <view class="card quiet">
+    <text class="line">{{copy.aboutCredit}}</text>
+    <text class="line">{{copy.aboutRepo}}</text>
+    <text class="line">{{copy.aboutPrivacy}}</text>
+    <text class="line muted">{{copy.sourceNote}}</text>
+  </view>
+</view>

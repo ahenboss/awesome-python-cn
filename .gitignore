@@ -7,3 +7,11 @@ site/
 
 # for vscode
 .vscode/
+
+# WeChat DevTools local config
+project.private.config.json
+miniprogram/project.private.config.json
+
+# Python
+__pycache__/
+*.pyc

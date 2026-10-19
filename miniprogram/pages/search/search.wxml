@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="bar">
+    <input
+      class="input"
+      placeholder="{{copy.searchPlaceholder}}"
+      placeholder-class="placeholder"
+      value="{{keyword}}"
+      confirm-type="search"
+      bindinput="onInput"
+      focus="{{true}}"
+    />
+    <text class="clear" wx:if="{{keyword}}" bindtap="clear">{{copy.searchClear}}</text>
+  </view>
+
+  <text class="hint" wx:if="{{idle}}">{{copy.searchIdle}}</text>
+  <block wx:else>
+    <text class="hit">{{hitText}}</text>
+    <text class="limit" wx:if="{{limitNote}}">{{limitNote}}</text>
+    <text class="hint" wx:if="{{empty}}">{{copy.searchEmpty}}</text>
+    <view class="cell" wx:for="{{results}}" wx:key="id" data-id="{{item.id}}" bindtap="openDetail">
+      <text class="name">{{item.name}}</text>
+      <text class="meta">{{item.categoryName}}<text wx:if="{{item.section}}"> · {{item.section}}</text></text>
+      <text class="desc">{{item.desc}}</text>
+    </view>
+  </block>
+</view>
