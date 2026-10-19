@@ -1,0 +1,27 @@
+<view class="page" wx:if="{{missing}}">
+  <text class="missing">{{copy.loadFail}}</text>
+</view>
+
+<view class="page" wx:else>
+  <view class="head">
+    <text class="name">{{name}}</text>
+    <text class="summary">{{summary}}</text>
+    <text class="count">{{countText}}</text>
+  </view>
+
+  <scroll-view class="filters" scroll-x="{{true}}" wx:if="{{sections.length}}">
+    <view class="filter-row">
+      <view class="filter {{current === '' ? 'on' : ''}}" data-section="__all__" bindtap="switchSection">{{copy.filterAll}}</view>
+      <view class="filter {{current === item ? 'on' : ''}}" wx:for="{{sections}}" wx:key="*this" data-section="{{item}}" bindtap="switchSection">{{item}}</view>
+    </view>
+  </scroll-view>
+
+  <text class="missing" wx:if="{{visible.length === 0}}">{{copy.emptyCategory}}</text>
+  <view class="cell" wx:for="{{visible}}" wx:key="id" data-id="{{item.id}}" bindtap="openDetail">
+    <view class="cell-top">
+      <text class="item-name">{{item.name}}</text>
+      <text class="section" wx:if="{{item.section}}">{{item.section}}</text>
+    </view>
+    <text class="desc" selectable="{{true}}">{{item.desc}}</text>
+  </view>
+</view>

@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/catalog/catalog",
+    "pages/about/about",
+    "pages/category/category",
+    "pages/detail/detail",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#16324f",
+    "navigationBarTitleText": "Python 资源库",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f3f5f7",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#667085",
+    "selectedColor": "#16324f",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/tab-home.png",
+        "selectedIconPath": "assets/tab-home-active.png"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "text": "分类",
+        "iconPath": "assets/tab-catalog.png",
+        "selectedIconPath": "assets/tab-catalog-active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "assets/tab-about.png",
+        "selectedIconPath": "assets/tab-about-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

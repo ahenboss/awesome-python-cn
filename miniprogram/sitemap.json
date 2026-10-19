@@ -1,0 +1,9 @@
+{
+  "desc": "Python 资源库允许搜索引擎索引全部页面",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

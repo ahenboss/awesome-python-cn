@@ -1,0 +1,39 @@
+page {
+  background: #f3f5f7;
+  color: #1d2939;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+view,
+text,
+button,
+input,
+scroll-view {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 24rpx 24rpx 64rpx;
+}
+
+.block-title {
+  display: block;
+  margin: 36rpx 8rpx 16rpx;
+  color: #16324f;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  line-height: 1.5;
+  font-size: 28rpx;
+}
+
+button::after {
+  border: none;
+}

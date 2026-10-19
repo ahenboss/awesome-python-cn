@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="search" bindtap="goSearch">
+    <view class="search-mark"></view>
+    <text class="search-text">{{copy.searchEntry}}</text>
+  </view>
+  <text class="lead">{{copy.catalogLead}}</text>
+
+  <view class="group" wx:for="{{groups}}" wx:key="id" wx:for-item="group">
+    <view class="group-head">
+      <text class="group-name">{{group.name}}</text>
+      <text class="group-desc">{{group.desc}}</text>
+    </view>
+    <view class="row" wx:for="{{group.categories}}" wx:for-item="cat" wx:key="id" data-id="{{cat.id}}" bindtap="openCategory">
+      <view class="row-main">
+        <text class="cat-name">{{cat.name}}</text>
+        <text class="cat-summary">{{cat.summary}}</text>
+      </view>
+      <text class="cat-count">{{cat.countText}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<view class="page" wx:if="{{missing}}">
+  <text class="missing">{{copy.loadFail}}</text>
+</view>
+
+<view class="page" wx:elif="{{item}}">
+  <text class="name">{{item.name}}</text>
+  <view class="tags">
+    <text class="tag">{{copy.detailCategory}} · {{item.categoryName}}</text>
+    <text class="tag" wx:if="{{item.section}}">{{copy.detailSection}} · {{item.section}}</text>
+  </view>
+
+  <view class="card">
+    <text class="label">{{copy.detailIntro}}</text>
+    <text class="desc" selectable="{{true}}">{{item.desc}}</text>
+    <button class="btn ghost" bindtap="copyDesc">{{copy.copyDesc}}</button>
+  </view>
+
+  <view class="card" wx:if="{{item.url}}">
+    <text class="label">{{copy.detailLink}}</text>
+    <text class="url" selectable="{{true}}">{{item.url}}</text>
+    <text class="hint">{{copy.openHint}}</text>
+    <button class="btn" bindtap="copyUrl">{{copy.copyLink}}</button>
+  </view>
+  <view class="card" wx:else>
+    <text class="hint">{{copy.noLink}}</text>
+  </view>
+
+  <view wx:if="{{related.length}}">
+    <text class="block-title">{{copy.relatedTitle}}</text>
+    <view class="related" wx:for="{{related}}" wx:key="id" data-id="{{item.id}}" bindtap="openDetail">
+      <text class="related-name">{{item.name}}</text>
+      <text class="related-desc">{{item.desc}}</text>
+    </view>
+  </view>
+</view>

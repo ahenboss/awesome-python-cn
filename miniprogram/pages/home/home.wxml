@@ -1,0 +1,36 @@
+<view class="page">
+  <view class="hero">
+    <text class="slogan">{{copy.slogan}}</text>
+    <text class="tagline">{{copy.tagline}}</text>
+    <text class="stats">{{statsText}}</text>
+    <view class="search" bindtap="goSearch">
+      <view class="search-mark"></view>
+      <text class="search-text">{{copy.searchEntry}}</text>
+    </view>
+  </view>
+
+  <text class="block-title">{{copy.hotTitle}}</text>
+  <view class="hot-grid">
+    <view class="hot-card" wx:for="{{hot}}" wx:key="id" data-id="{{item.id}}" bindtap="openCategory">
+      <text class="hot-name">{{item.name}}</text>
+      <text class="hot-summary">{{item.summary}}</text>
+      <text class="hot-count">{{item.countText}}</text>
+    </view>
+  </view>
+
+  <text class="block-title">{{copy.groupTitle}}</text>
+  <view class="group" wx:for="{{groups}}" wx:key="id" wx:for-item="group">
+    <view class="group-head">
+      <text class="group-name">{{group.name}}</text>
+      <text class="group-desc">{{group.desc}}</text>
+    </view>
+    <view class="chips">
+      <view class="chip" wx:for="{{group.categories}}" wx:for-item="cat" wx:key="id" data-id="{{cat.id}}" bindtap="openCategory">
+        <text class="chip-name">{{cat.name}}</text>
+        <text class="chip-count">{{cat.count}}</text>
+      </view>
+    </view>
+  </view>
+
+  <text class="footer">{{copy.sourceNote}}</text>
+</view>
